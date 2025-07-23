@@ -1,3 +1,13 @@
+## 关于
+
+本项目为3DSRNGTool中文特供版
+
+- 同步发行版1.0.6源码文件，强制使用.NET Framework 4.5.2，若使用更高版本可能导致UI相关问题
+- 软件语言改为默认简体中文
+- 将lang_zh.txt同步lang_en.txt修复由中文切回英文再切回中文时，部分文本还是英文的问题
+
+# 以下是原说明文档
+
 # 3DS RNG Tool [![Build status](https://ci.appveyor.com/api/projects/status/p58tu8nai3cqexuq/branch/master?svg=true)](https://ci.appveyor.com/project/wwwwwwzx/3dsrngtool/branch/master)
 
 This is an RNG Tool for main 3DS Pokemon games. Some parts should work with [PokeCalcNTR](https://gbatemp.net/threads/pokecalcntr-for-gen-6-the-rng-tool-suite-for-the-3ds.473221/) using NTR-CFW.
