@@ -1,0 +1,10 @@
+version: 1.0.6.{build}
+image: Visual Studio 2017
+configuration: Release
+build:
+  verbosity: minimal
+after_build:
+- cmd: 7z a 3DSRNGTool.zip .\3DSRNGTool\bin\Release\3DSRNGTool.exe
+artifacts:
+- path: 3DSRNGTool.zip
+  name: 3DSRNGTool

@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
 using Pk3DSRNGTool.RNG;
 
 namespace Pk3DSRNGTool
 {
     public class TinySeedFinder
     {
-        private CancellationTokenSource cts;
-
         private int Advance;
         public readonly uint[] NatureList = new uint[8];
 
         #region Threading
-        public List<string> seedlist = new();
+        public List<string> seedlist = new List<string>();
+        public List<Thread> thrds = new List<Thread>();
 
         public int Cnt; // Progress
-        private static int Thread_Number => Environment.ProcessorCount;
+        const int Thread_Number = 8;
         public readonly int Max = 0x10000 + Thread_Number;
 
         public event EventHandler Update;
@@ -36,20 +34,22 @@ namespace Pk3DSRNGTool
             NewResult?.Invoke(this, e);
         }
 
-        private readonly object _locker = new();
+        private object _locker = new object();
 
         public void Abort()
         {
-            cts.Cancel();
-            cts = new();
+            if (thrds.Count == 0)
+                return;
+            foreach (var t in thrds)
+                if (t.IsAlive)
+                    t.Abort();
         }
 
         public void Clear()
         {
             seedlist.Clear();
             seedlist = new List<string>();
-            cts.Cancel();
-            cts = new();
+            thrds.Clear();
             Cnt = 0;
         }
 
@@ -109,37 +109,46 @@ namespace Pk3DSRNGTool
                 tiny.Next();
         }
 
-        private void FindSeed(uint seedmin, uint seedmax, CancellationToken token)
+
+        private void findseed(uint seedmin, uint seedmax)
         {
             for (uint i = seedmin; i <= seedmax; i++)
             {
                 if (Check(i))
                     parseseed(i);
-                if ((ushort)i != 0xFFFF)
-                    continue;
-                UpdateProgress(null);
-                if (i == 0xFFFFFFFF || token.IsCancellationRequested) // (0xFFFFFFFF)++ = 0
-                    break;
+                if ((ushort)i == 0xFFFF)
+                {
+                    UpdateProgress(null);
+                    if (i == 0xFFFFFFFF) // (0xFFFFFFFF)++ = 0
+                        break;
+                }
             }
             UpdateProgress(null);
         }
 
+        private void FindSeed(object param)
+        {
+            var seedrange = (uint[])param;
+            findseed(seedrange[0], seedrange[1]);
+        }
         #endregion
 
         public void Search()
         {
-            ulong blocksize = (uint.MaxValue / ((ulong)Environment.ProcessorCount)) + 1;
-
-            var token = cts.Token;
-            Parallel.For(0, Thread_Number, new ParallelOptions { CancellationToken = token }, (index) =>
+            var threadstart = new ParameterizedThreadStart(FindSeed);
+            ulong blocksize = uint.MaxValue / Thread_Number + 1;
+            List<object> paramlist = new List<object>();
+            ulong i = 0;
+            for (; i + blocksize <= uint.MaxValue; i += blocksize)
+                paramlist.Add(new uint[] { (uint)i, (uint)(i + blocksize - 1) });
+            paramlist.Add(new uint[] { (uint)i, uint.MaxValue });
+            for (int j = 0; j < paramlist.Count; j++)
             {
-                if (token.IsCancellationRequested)
-                    return; // Don't throw.
-
-                ulong start = (ulong)index * blocksize;
-                ulong end = (index == Thread_Number - 1) ? uint.MaxValue : start + blocksize - 1;
-                FindSeed((uint)start, (uint)end, token);
-            });
+                var t = new Thread(threadstart);
+                t.IsBackground = true;
+                t.Start(paramlist[j]);
+                thrds.Add(t);
+            }
         }
     }
 }

@@ -2,24 +2,23 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
 using Pk3DSRNGTool.RNG;
 
 namespace Pk3DSRNGTool
 {
     public class MTSeedFinder
     {
-        private CancellationTokenSource cts = new();
         private int minframe1, maxframe1, minframe2, maxframe2, poolsize1, _poolsize1, poolsize2, _poolsize2, gap;
         private int[] IV1, IV2;
 
-        public List<Frame_Seed> seedlist = new();
-        public const int PreAdvance = 63;  // Misc consumption 60 + 1 + EC + PID
+        public List<Frame_Seed> seedlist = new List<Frame_Seed>();
+        public int PreAdvance = 63;  // Misc consumption 60 + 1 + EC + PID
 
         #region Threading
+        public List<Thread> thrds = new List<Thread>();
 
         public int Cnt, Max; // Progress
-        private static int Thread_Number => Environment.ProcessorCount;
+        const int Thread_Number = 8;
 
         public event EventHandler Update;
         private void UpdateProgress(EventArgs e)
@@ -37,20 +36,22 @@ namespace Pk3DSRNGTool
             NewResult?.Invoke(this, e);
         }
 
-        private readonly object _locker = new();
+        private object _locker = new object();
 
         public void Abort()
         {
-            cts.Cancel();
-            cts = new();
+            if (thrds.Count == 0)
+                return;
+            foreach (var t in thrds)
+                if (t.IsAlive)
+                    t.Abort();
         }
 
         public void Clear()
         {
             seedlist.Clear();
             seedlist = new List<Frame_Seed>();
-            cts.Cancel();
-            cts = new();
+            thrds.Clear();
             Cnt = 0;
         }
         #endregion
@@ -112,7 +113,7 @@ namespace Pk3DSRNGTool
             }
         }
 
-        private void findseed(uint seedmin, uint seedmax, CancellationToken token)
+        private void findseed(uint seedmin, uint seedmax)
         {
             uint[] Pool1 = new uint[poolsize1];
             uint[] Pool2 = new uint[poolsize2];
@@ -123,15 +124,21 @@ namespace Pk3DSRNGTool
                 frame = FindFrame(i, Pool1, Pool2);
                 if (frame[1] != 0)
                     parseseed(i, frame[0], frame[1]);
-                if ((ushort)i != updatepoint)
-                    continue;
-                UpdateProgress(null);
-                if (i == 0xFFFFFFFF || token.IsCancellationRequested) // 0xFFFFFFFF ++ = 0
-                    break;
+                if ((ushort)i == updatepoint)
+                {
+                    UpdateProgress(null);
+                    if (i == 0xFFFFFFFF) // 0xFFFFFFFF ++ = 0
+                        break;
+                }
             }
             UpdateProgress(null);
         }
 
+        private void findseed1(object param)
+        {
+            var seedrange = (uint[])param;
+            findseed(seedrange[0], seedrange[1]);
+        }
         #endregion
 
         #region Search2
@@ -189,7 +196,7 @@ namespace Pk3DSRNGTool
             }
         }
 
-        private void findseed2(uint seedmin, uint seedmax, CancellationToken token)
+        private void findseed2(uint seedmin, uint seedmax)
         {
             uint[] Pool = new uint[poolsize];
             ushort updatepoint = (ushort)seedmax;
@@ -201,36 +208,37 @@ namespace Pk3DSRNGTool
                 if ((ushort)i == updatepoint)
                 {
                     UpdateProgress(null);
-                    if (i == 0xFFFFFFFF || token.IsCancellationRequested) // (0xFFFFFFFF)++ = 0
+                    if (i == 0xFFFFFFFF) // (0xFFFFFFFF)++ = 0
                         break;
                 }
             }
             UpdateProgress(null);
         }
 
+        private void findseed2(object param)
+        {
+            var seedrange = (uint[])param;
+            findseed2(seedrange[0], seedrange[1]);
+        }
         #endregion
 
         public void Search(uint seedmin, uint seedmax, bool full)
         {
-            Action<uint, uint, CancellationToken> threadstart = full ? findseed : findseed2;
-
-            // Calculate the total range
-            ulong totalRange = (ulong)seedmax - seedmin + 1;
-            int processorCount = Thread_Number;
-            ulong blocksize = (totalRange / (ulong)processorCount) + 1;
-
-            var token = cts.Token;
-            Parallel.For(0, processorCount, new ParallelOptions { CancellationToken = token }, index =>
+            var threadstart = full ? new ParameterizedThreadStart(findseed1) : new ParameterizedThreadStart(findseed2);
+            ulong blocksize = (seedmax - seedmin) / Thread_Number + 1;
+            ulong i = seedmin;
+            List<object> paramlist = new List<object>();
+            for (; i + blocksize <= seedmax; i += blocksize)
+                paramlist.Add(new uint[] { (uint)i, (uint)(i + blocksize - 1) });
+            paramlist.Add(new uint[] { (uint)i, seedmax });
+            for (int j = 0; j < paramlist.Count; j++)
             {
-                if (token.IsCancellationRequested)
-                    return;
-
-                ulong start = seedmin + (ulong)index * blocksize;
-                ulong end = (index == processorCount - 1) ? seedmax : start + blocksize - 1;
-                threadstart((uint)start, (uint)end, token);
-            });
-
-            Max = (int)((seedmax - seedmin) >> 16) + 1 + processorCount;
+                var t = new Thread(threadstart);
+                t.IsBackground = true;
+                t.Start(paramlist[j]);
+                thrds.Add(t);
+            }
+            Max = (int)((seedmax - seedmin) >> 16) + 1 + paramlist.Count;
         }
     }
 }

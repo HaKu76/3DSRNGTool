@@ -1,4 +1,5 @@
-# 3DS RNG Tool [![Build status](https://github.com/wwwwwwzx/3DSRNGTool/actions/workflows/ci.yml/badge.svg)](https://github.com/wwwwwwzx/3DSRNGTool/actions/workflows/ci.yml)
+# 3DS RNG Tool [![Build status](https://ci.appveyor.com/api/projects/status/p58tu8nai3cqexuq/branch/master?svg=true)](https://ci.appveyor.com/project/wwwwwwzx/3dsrngtool/branch/master)
+
 This is an RNG Tool for main 3DS Pokemon games. Some parts should work with [PokeCalcNTR](https://gbatemp.net/threads/pokecalcntr-for-gen-6-the-rng-tool-suite-for-the-3ds.473221/) using NTR-CFW.
 
 This tool is a complete rewrite based off my SMEncounterRNGTool with largely improved performance and the following features:
@@ -19,14 +20,14 @@ This tool is a complete rewrite based off my SMEncounterRNGTool with largely imp
 
 ## Credit
 
-- [Zaksabeast](https://github.com/zaksabeast), [Zep715](https://github.com/zep715), [Real96](https://github.com/Real96), [Admiral Fish](https://github.com/Admiral-Fish) and [Shiny_Sylveon](https://github.com/ShinySylveon04) for great teamworks on gen6 development  
+- Zaksabeast, Zep715, Real96, Admiral Fish and Shiny_Sylveon for great teamworks on gen6 development  
    - Zaksabeast and Admiral Fish for building up the plugin
    - Real96 for testing and lots of good advice
    - Zep715 for figuring out tons of infomation from the assembly
    - Shiny_Sylveon for contributions to Gen6 Egg RNG
-- [odanado](https://github.com/odanado) for making Gen7 RNG API, which make us find initial seed mush faster.
-- [Kaphotics](https://github.com/kwsch) for [PKHeX](https://github.com/kwsch/PKHeX), [KeyBV](https://github.com/kwsch/KeyBV) and [pk3DS](https://github.com/kwsch/pk3DS). I borrowed some code from the PKHeX Core Library and extracted ROM info using pk3DS.
-- [44670](https://github.com/44670) for [NTRClient](https://github.com/Hartie95/NTRClient).
+- odanado for making Gen7 RNG API, which make us find initial seed mush faster.
+- Kaphotics for PkHeX, KeyBV and Pk3DS. I borrowed some code from the PKHeX Core Library and extracted ROM info using Pk3DS.
+- 44670 for NTRClient.
 
 ## Final Screen
 
