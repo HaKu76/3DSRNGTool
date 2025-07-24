@@ -119,7 +119,7 @@
             this.B_Back.Name = "B_Back";
             this.B_Back.Size = new System.Drawing.Size(61, 25);
             this.B_Back.TabIndex = 118;
-            this.B_Back.Text = "删去";
+            this.B_Back.Text = "消去";
             this.B_Back.UseVisualStyleBackColor = true;
             this.B_Back.Click += new System.EventHandler(this.B_DelNature_Click);
             // 

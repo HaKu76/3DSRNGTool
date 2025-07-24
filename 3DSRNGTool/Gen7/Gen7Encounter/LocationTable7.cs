@@ -34,21 +34,21 @@ namespace Pk3DSRNGTool
             #region MeleMele
             new EncounterArea_SM
             {
-                Location = 008, idx = 1,
+                Location = 008, idx = 1, mark = "主角的家旁边",
                 Correction = 15,
                 LevelMin = 02, LevelMax = 03,
                 Species = new[] {0,734,731,010,165},
             },
             new EncounterArea_SM
             {
-                Location = 008, idx = 2,
+                Location = 008, idx = 2, mark = "利利小镇旁边",
                 Correction = 15,
                 LevelMin = 03, LevelMax = 05,
                 Species = new[] {1,734,731,736,010,011,165,172},
             },
             new EncounterArea_SM
             {
-                Location = 008, idx = 3,
+                Location = 008, idx = 3, mark = "需要肯泰罗",
                 Correction = 15, NPC = 2,
                 LevelMin = 10,
                 Species = new[] {2,734,731,438,010,011,165,446},
@@ -69,28 +69,28 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 016, idx = 1, mark = "E",
+                Location = 016, idx = 1, mark = "1号道路",
                 Correction = 09, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {15,072,278,456},
             },
             new EncounterArea_SM
             {
-                Location = 016, idx = 2, mark = "W",
+                Location = 016, idx = 2, mark = "好奥乐市",
                 Correction = 05, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {15,072,278,456},
             },
             new EncounterArea_SM
             {
-                Location = 012, idx = 1,
+                Location = 012, idx = 1, mark = "最南端",
                 Correction = 21, NPC = 0,
                 LevelMin = 07,
                 Species = new[] {16,096,052,734,235,063},
             },
             new EncounterArea_SM
             {
-                Location = 012, idx = 2,
+                Location = 012, idx = 2, mark = "最北端",
                 Correction = 21, NPC = 1,
                 LevelMin = 07,
                 Species = new[] {17,742,058,734,021,235},
@@ -104,14 +104,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 010, idx = 1,
+                Location = 010, idx = 1, mark = "桥北边",
                 Correction = 15, NPC = 0,
                 LevelMin = 09,
                 Species = new[] {18,742,021,734,225,056},
             },
             new EncounterArea_SM
             {
-                Location = 010, idx = 2,
+                Location = 010, idx = 2, mark = "桥南边",
                 Correction = 15, NPC = 1,
                 LevelMin = 09,
                 Species = new[] {19,742,021,734,056,371},
@@ -146,46 +146,46 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 042, idx = 1, mark = "Cave",
+                Location = 042, idx = 1, mark = "陆地",
                 LevelMin = 09,
                 Species = new[] {0,041,050,041,041},
             },
             new EncounterArea_SM
             {
-                Location = 042, idx = 2, mark = "Water",
+                Location = 042, idx = 2, mark = "水路",
                 Correction = 02, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {14,041,054,041,041,041},
             },
             new EncounterArea_SM
             {
-                Location = 014, idx = 1, mark = "Grass",
+                Location = 014, idx = 1, mark = "陆地",
                 LevelMin = 15,
                 Species = new[] {22,734,278,278,371,079},
             },
             new EncounterArea_SM
             {
-                Location = 014, idx = 2, mark = "Water",
+                Location = 014, idx = 2, mark = "水路",
                 Correction = 02, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {15,072,278,456},
             },
             new EncounterArea_SM
             {
-                Location = 034, idx = 1, mark = "Cave", //Ten Carat Hill - Cave
+                Location = 034, idx = 1, mark = "洞窟", //Ten Carat Hill - Cave
                 Correction = 02,
                 LevelMin = 10,
                 Species = new[] {14,041,052,524,524,703},
             },
             new EncounterArea_SM
             {
-                Location = 034, idx = 2, mark = "Grass", //Ten Carat Hill - Grass
+                Location = 034, idx = 2, mark = "最深处", //Ten Carat Hill - Grass
                 LevelMin = 10,
                 Species = new[] {14,066,744,327,524,703},
             },
             new EncounterArea_SM
             {
-                Location = 034, idx = 3, mark = "Water", //Ten Carat Hill - Water
+                Location = 034, idx = 3, mark = "水路", //Ten Carat Hill - Water
                 Correction = 03, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {14,041,054,041,041,041},
@@ -209,70 +209,70 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 052, idx = 1, //5
+                Location = 052, idx = 1, mark = "南部", //5
                 Correction = 21,
                 LevelMin = 13,
                 Species = new[] {3,506,731,753,736,010,011,012},
             },
             new EncounterArea_SM
             {
-                Location = 052, idx = 2, //5
+                Location = 052, idx = 2, mark = "北部", //5
                 Correction = 21, NPC = 1,
                 LevelMin = 18,
                 Species = new[] {4,753,732,438,736,010,011,012},
             },
             new EncounterArea_SM
             {
-                Location = 090, idx = 1, mark = "S",//Lush Jungle - S
+                Location = 090, idx = 1, mark = "南部",//Lush Jungle - S
                 Correction = 07,
                 LevelMin = 18,
                 Species = new[] {9,753,732,438,010,011,046,766,764},
             },
             new EncounterArea_SM
             {
-                Location = 090, idx = 2, mark = "W",//Lush Jungle - W
+                Location = 090, idx = 2, mark = "西北部",//Lush Jungle - W
                 Correction = 02,
                 LevelMin = 18,
                 Species = new[] {10,753,732,761,046,766,764},
             },
             new EncounterArea_SM
             {
-                Location = 090, idx = 3, mark = "N",//Lush Jungle - N
+                Location = 090, idx = 3, mark = "北部",//Lush Jungle - N
                 Correction = 02,
                 LevelMin = 18,
                 Species = new[] {11,753,732,046,127,764,766},
             },
             new EncounterArea_SM
             {
-                Location = 090, idx = 4, mark = "Cave", //Lush Jungle - Cave
+                Location = 090, idx = 4, mark = "东部洞穴", //Lush Jungle - Cave
                 Correction = 02,
                 LevelMin = 18,
                 Species = new[] {0,041,050,041,041},
             },
             new EncounterArea_SM
             {
-                Location = 086, idx = 1, mark = "Grass1", //Brooklet Hill
+                Location = 086, idx = 1, mark = "最北部陆地", //Brooklet Hill
                 Correction = 07, NPC = 1,
                 LevelMin = 14,
                 Species = new[] {6,506,054,751,060,278,046},
             },
             new EncounterArea_SM
             {
-                Location = 086, idx = 2, mark = "Water1",//Brooklet Hill
+                Location = 086, idx = 2, mark = "最北部水路",//Brooklet Hill
                 Correction = 08, NPC = 1,
                 LevelMin = 14,
                 Species = new[] {22,060,751,060,751,054},
             },
             new EncounterArea_SM
             {
-                Location = 086, idx = 3, mark = "Grass2",//Brooklet Hill
+                Location = 086, idx = 3, mark = "南边陆地",//Brooklet Hill
                 Correction = 05, NPC = 1,
                 LevelMin = 14,
                 Species = new[] {25,751,060,054,278},
             },
             new EncounterArea_SM
             {
-                Location = 086, idx = 4, mark = "Water2",//Brooklet Hill
+                Location = 086, idx = 4, mark = "南边水路",//Brooklet Hill
                 Correction = 06, NPC = 1,
                 LevelMin = 14,
                 Species = new[] {22,060,751,060,751,054},
@@ -286,14 +286,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 054, idx = 1, //6
+                Location = 054, idx = 1, mark = "北边",//6
                 Correction = 11, NPC = 2,
                 LevelMin = 14,
                 Species = new[] {23,506,749,736,734,731,174,133},
             },
             new EncounterArea_SM
             {
-                Location = 054, idx = 2, //6
+                Location = 054, idx = 2, mark = "南边",//6
                 Correction = 11, NPC = 2,
                 LevelMin = 14,
                 Species = new[] {23,506,741,736,734,731,174,133},
@@ -307,14 +307,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 058, idx = 1, mark = "Grass",//8
+                Location = 058, idx = 1, mark = "陆地",//8
                 Correction = 15,
                 LevelMin = 17,
                 Species = new[] {27,734,732,757,662,759},
             },
             new EncounterArea_SM
             {
-                Location = 058, idx = 2, mark = "Water",//8
+                Location = 058, idx = 2, mark = "水路",//8
                 Correction = 16, NPC = 3,
                 LevelMin = 17,
                 Species = new[] {15,072,278,456},
@@ -395,14 +395,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 122, idx = 1,//12
+                Location = 122, idx = 1, mark = "北部", //12
                 Correction = 11,
                 LevelMin = 26,
                 Species = new[] {21,074,749,324,324,074,239},
             },
             new EncounterArea_SM
             {
-                Location = 122, idx = 2,//12
+                Location = 122, idx = 2, mark = "最南端", //12
                 Correction = 11, NPC = 1,
                 LevelMin = 25,
                 Species = new[] {21,074,749,324,324,074,239},
@@ -416,14 +416,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 138, idx = 1,
+                Location = 138, idx = 1, mark = "东部",
                 Correction = 3, NPC = 1,
                 LevelMin = 27, lvldiff = -1,
                 Species = new[] {7,074,749,737,324,776,777,239},
             },
             new EncounterArea_SM
             {
-                Location = 138, idx = 2,
+                Location = 138, idx = 2, mark = "西部",
                 Correction = 3, NPC = 1,
                 LevelMin = 27, lvldiff = -1,
                 Species = new[] {7,074,749,737,324,776,777,239},
@@ -456,14 +456,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 116, idx = 1, mark = "Grass", //15
+                Location = 116, idx = 1, mark = "陆地", //15
                 Correction = 20, NPC = 1,
                 LevelMin = 30,
                 Species = new[] {22,735,279,279,279,079},
             },
             new EncounterArea_SM
             {
-                Location = 116, idx = 2, mark = "Water", //15
+                Location = 116, idx = 2, mark = "水路", //15
                 Correction = 21, NPC = 1,
                 LevelMin = 30,
                 Species = new[] {15,072,279,456},
@@ -484,34 +484,34 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 120, idx = 1, //17
+                Location = 120, idx = 1, mark = "绿色草丛", //17
                 Correction = 10, Raining = true,
                 LevelMin = 31,
                 Species = new[] {22,735,022,674,674,166},
             },
             new EncounterArea_SM
             {
-                Location = 120, idx = 2, //17
+                Location = 120, idx = 2, mark = "褐色草丛", //17
                 Correction = 10, Raining = true,
                 LevelMin = 31,
                 Species = new[] {21,735,022,674,075,075,227},
             },
             new EncounterArea_SM
             {
-                Location = 146, idx = 1,
+                Location = 146, idx = 1, mark="山腰东边",
                 LevelMin = 42,
                 Species = new[] {22,037,361,359,359,215},
             },
             new EncounterArea_SM
             {
-                Location = 146, idx = 2,
+                Location = 146, idx = 2, mark="洞窟",
                 LevelMin = 42,
                 Species = new[] {22,042,361,359,780,215},
                 Reverse = true,
             },
             new EncounterArea_SM
             {
-                Location = 146, idx = 3,
+                Location = 146, idx = 3, mark="山腰西边和山上",
                 LevelMin = 45, lvldiff = -3,
                 Species = new[] {22,037,361,359,359,215},
             },
@@ -527,14 +527,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 158, idx = 1, mark = "Grass", // Poni Wilds
+                Location = 158, idx = 1, mark = "陆地", // Poni Wilds
                 Correction = 09,
                 LevelMin = 40,
                 Species = new[] {5,735,279,210,423,102,102},
             },
             new EncounterArea_SM
             {
-                Location = 158, idx = 2, mark = "Water", // Poni Wilds
+                Location = 158, idx = 2, mark = "水路", // Poni Wilds
                 Correction = 10, NPC = 1,
                 LevelMin = 40,
                 Species = new[] {30,073,423,279,457,131},
@@ -548,14 +548,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 174, idx = 1, mark = "Inside",
+                Location = 174, idx = 1, mark = "洞窟",
                 Correction = 6, NPC = 1,
                 LevelMin = 41,
                 Species = new[] {14,042,051,525,525,703},
             },
             new EncounterArea_SM
             {
-                Location = 174, idx = 2, mark = "Top",
+                Location = 174, idx = 2, mark = "山顶",
                 LevelMin = 41,
                 Species = new[] {1,067,745,227,525,198,703,782},
             },
@@ -575,21 +575,21 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 174, idx = 5, mark = "Under Tree",
+                Location = 174, idx = 5, mark = "树下",
                 Correction = 15,
                 LevelMin = 41,
                 Species = new[] {1,067,745,227,525,198,703,782},
             },
             new EncounterArea_SM
             {
-                Location = 174, idx = 6, mark = "B1F-C",
+                Location = 174, idx = 6, mark = "B1F陆地",
                 Correction = 8,
                 LevelMin = 41,
                 Species = new[] {14,042,051,525,525,703},
             },
             new EncounterArea_SM
             {
-                Location = 174, idx = 7, mark = "B1F-W",
+                Location = 174, idx = 7, mark = "B1F水路",
                 Correction = 9, NPC = 1,
                 LevelMin = 41,
                 Species = new[] {14,042,055,042,042,042},
@@ -603,28 +603,28 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_SM
             {
-                Location = 166, idx = 1, // Poni Plains
+                Location = 166, idx = 1, mark="海岸线旁", // Poni Plains
                 Correction = 5, NPC = 1,
                 LevelMin = 54,
                 Species = new[] {7,735,279,732,546,128,241,546},
             },
             new EncounterArea_SM
             {
-                Location = 166, idx = 2, // Poni Plains
+                Location = 166, idx = 2, mark="中间七片草", // Poni Plains
                 Correction = 5, NPC = 1,
                 LevelMin = 54,
                 Species = new[] {21,735,732,546,128,241,546},
             },
             new EncounterArea_SM
             {
-                Location = 166, idx = 3, // Poni Plains
+                Location = 166, idx = 3, mark="北边和树旁", // Poni Plains
                 Correction = 5, NPC = 1,
                 LevelMin = 54,
                 Species = new[] {7,735,097,732,546,128,241,546},
             },
             new EncounterArea_SM
             {
-                Location = 166, idx = 4, // Poni Plains
+                Location = 166, idx = 4, mark="田字状台地南方", // Poni Plains
                 Correction = 5, NPC = 1,
                 LevelMin = 54,
                 Species = new[] {31,735,732,750,022,546,128,241},
@@ -664,21 +664,21 @@ namespace Pk3DSRNGTool
             #region MeleMele
             new EncounterArea_USUM
             {
-                Location = 008, idx = 1,
+                Location = 008, idx = 1, mark = "主角的家旁边",
                 Correction = 13,
                 LevelMin = 02, LevelMax = 03,
                 Species = new[] {33,734,731,427,165,736,010,172},
             },
             new EncounterArea_USUM
             {
-                Location = 008, idx = 2,
+                Location = 008, idx = 2, mark = "利利小镇旁边",
                 Correction = 13, NPC = 1,
                 LevelMin = 02, LevelMax = 03,
                 Species = new[] {11,734,010,427,010,734,010},
             },
             new EncounterArea_USUM
             {
-                Location = 008, idx = 3,
+                Location = 008, idx = 3, mark = "需要肯泰罗",
                 Correction = 13, NPC = 1,
                 LevelMin = 11,
                 Species = new[] {09,734,731,438,438,438,744,446,446},
@@ -699,35 +699,35 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 016, idx = 1, mark = "E",
+                Location = 016, mark = "1号道路",
                 Correction = 9, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {34,072,278,456,458},
             },
             new EncounterArea_USUM
             {
-                Location = 016, idx = 2, mark = "W",
+                Location = 016, idx = 2, mark = "好奥乐市",
                 Correction = 4, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {34,072,278,456,458},
             },
             new EncounterArea_USUM
             {
-                Location = 012, idx = 1,
+                Location = 012, idx = 1, mark = "最南端",
                 Correction = 31, NPC = 1,
                 LevelMin = 07,
                 Species = new[] {35,296,023,676,052,235,734,063,096},
             },
             new EncounterArea_USUM
             {
-                Location = 012, idx = 2,
+                Location = 012, idx = 2, mark = "宝可梦中心旁",
                 Correction = 31,
                 LevelMin = 07,
                 Species = new[] {35,296,023,058,742,235,734,021,096},
             },
             new EncounterArea_USUM
             {
-                Location = 012, idx = 3,
+                Location = 012, idx = 3, mark = "最北端",
                 Correction = 32, NPC = 2,
                 LevelMin = 07,
                 Species = new[] {35,021,742,058,742,235,734,021,734},
@@ -748,14 +748,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 010, idx = 1,
+                Location = 010, idx = 1, mark = "桥北边",
                 Correction = 19,
                 LevelMin = 09,
                 Species = new[] {35,742,021,056,701,056,056,742,021},
             },
             new EncounterArea_USUM
             {
-                Location = 010, idx = 2,
+                Location = 010, idx = 2, mark = "桥南边",
                 Correction = 15, NPC = 1,
                 LevelMin = 09,
                 Species = new[] {37,742,021,056,701,056,742,021,371},
@@ -769,14 +769,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 021, idx = 1,
+                Location = 021, idx = 1, mark = "北端",
                 Correction = 30,
                 LevelMin = 06,
                 Species = new[] {44,278,278,063,439,676,081,052,088,676,676},
             },
             new EncounterArea_USUM
             {
-                Location = 021, idx = 2,
+                Location = 021, idx = 2, mark = "南端",
                 Correction = 30,
                 LevelMin = 06,
                 Species = new[] {38,676,063,439,088,081,052,278},
@@ -797,48 +797,48 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 042, idx = 1, mark = "Cave",
+                Location = 042, idx = 1, mark = "陆地",
                 Correction = 06,
                 LevelMin = 09,
                 Species = new[] {11,054,225,238,041,041,041},
             },
             new EncounterArea_USUM
             {
-                Location = 042, idx = 2, mark = "Water",
+                Location = 042, idx = 2, mark = "水路",
                 Correction = 07, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {40,041,086,225,041,054},
             },
             new EncounterArea_USUM
             {
-                Location = 014, idx = 1, mark = "Grass",
+                Location = 014, idx = 1, mark = "陆地",
                 Correction = 02,
                 LevelMin = 15,
                 Species = new[] {22,734,278,278,371,079},
             },
             new EncounterArea_USUM
             {
-                Location = 014, idx = 2, mark = "Water",
+                Location = 014, idx = 2, mark = "水路",
                 Correction = 03, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {34,072,278,456,458},
             },
             new EncounterArea_USUM
             {
-                Location = 034, idx = 1, mark = "Cave", //Ten Carat Hill - Cave
+                Location = 034, idx = 1, mark = "洞窟", //Ten Carat Hill - Cave
                 LevelMin = 11,
                 Species = new[] {35,703,303,054,524,524,303,041,041},
             },
             new EncounterArea_USUM
             {
-                Location = 034, idx = 2, mark = "Grass", //Ten Carat Hill - Grass
+                Location = 034, idx = 2, mark = "最深处", //Ten Carat Hill - Grass
                 Correction = 02,
                 LevelMin = 11,
                 Species = new[] {35,066,327,744,066,744,327,524,703},
             },
             new EncounterArea_USUM
             {
-                Location = 034, idx = 3, mark = "Water", //Ten Carat Hill - Water
+                Location = 034, idx = 3, mark = "水路", //Ten Carat Hill - Water
                 Correction = 02, NPC = 1,
                 LevelMin = 15,
                 Species = new[] {40,041,041,041,041,054},
@@ -862,28 +862,28 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 052, idx = 1, //5
+                Location = 052, idx = 1, mark = "南部", //5
                 Correction = 25,
                 LevelMin = 13,
                 Species = new[] {43,506,731,736,753,010,011,012},
             },
             new EncounterArea_USUM
             {
-                Location = 052, idx = 2, //5
+                Location = 052, idx = 2, mark = "北部", //5
                 Correction = 25, NPC = 1,
                 LevelMin = 18,
                 Species = new[] {37,753,732,438,753,736,010,011,012},
             },
             new EncounterArea_USUM
             {
-                Location = 086, idx = 1, mark = "Grass", //Brooklet Hill
+                Location = 086, idx = 1, mark = "陆地", //Brooklet Hill
                 Correction = 08, NPC = 1,
                 LevelMin = 14,
                 Species = new[] {39,751,060,054,278,046,046,046},
             },
             new EncounterArea_USUM
             {
-                Location = 086, idx = 2, mark = "Water",//Brooklet Hill
+                Location = 086, idx = 2, mark = "水路",//Brooklet Hill
                 Correction = 07, NPC = 1,
                 LevelMin = 14,
                 Species = new[] {22,060,751,060,751,054},
@@ -897,42 +897,42 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 090, idx = 1, mark = "S",//Lush Jungle - S
+                Location = 090, idx = 1, mark = "南部",//Lush Jungle - S
                 Correction = 10,
                 LevelMin = 19,
                 Species = new[] {44,753,732,438,011,762,046,764,766,127,732},
             },
             new EncounterArea_USUM
             {
-                Location = 090, idx = 2, mark = "W",//Lush Jungle - W
+                Location = 090, idx = 2, mark = "西北部",//Lush Jungle - W
                 Correction = 04, NPC = 3,
                 LevelMin = 19,
                 Species = new[] {44,753,732,438,011,762,046,764,766,127,732},
             },
             new EncounterArea_USUM
             {
-                Location = 090, idx = 3, mark = "N",//Lush Jungle - N
+                Location = 090, idx = 3, mark = "北部",//Lush Jungle - N
                 Correction = 09,
                 LevelMin = 19,
                 Species = new[] {44,753,732,438,011,762,046,764,766,127,732},
             },
             new EncounterArea_USUM
             {
-                Location = 090, idx = 4, mark = "Cave", //Lush Jungle - Cave
+                Location = 090, idx = 4, mark = "东部洞穴", //Lush Jungle - Cave
                 Correction = 02,
                 LevelMin = 41,
                 Species = new[] {37,042,051,042,051,757,757,042,636},
             },
             new EncounterArea_USUM
             {
-                Location = 054, idx = 1, //6
+                Location = 054, idx = 1, mark = "北边",//6
                 Correction = 12, NPC = 3,
                 LevelMin = 14,
                 Species = new[] {41,506,749,174,736,734,731,174,133},
             },
             new EncounterArea_USUM
             {
-                Location = 054, idx = 2, //6
+                Location = 054, idx = 2, mark = "南边",//6
                 Correction = 12, NPC = 1,
                 LevelMin = 14,
                 Species = new[] {41,506,741,174,736,734,731,174,133},
@@ -946,14 +946,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 058, idx = 1, mark = "Grass",//8
+                Location = 058, idx = 1, mark = "陆地",//8
                 Correction = 25,
                 LevelMin = 17,
                 Species = new[] {45,734,732,757,759,661,757},
             },
             new EncounterArea_USUM
             {
-                Location = 058, idx = 2, mark = "Water",//8
+                Location = 058, idx = 2, mark = "水路",//8
                 Correction = 26, NPC = 2,
                 LevelMin = 17,
                 Species = new[] {34,072,278,456,458},
@@ -1019,7 +1019,7 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 136, idx = 1, // Hokulani
+                Location = 136, idx = 1, mark="山顶", // Hokulani
                 Correction = 28,
                 LevelMin = 27,
                 Species = new[] {37,605,774,774,173,374,173,132,132},
@@ -1027,7 +1027,7 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 136, idx = 2, // Hokulani
+                Location = 136, idx = 2, mark="山腰", // Hokulani
                 Correction = 28,
                 LevelMin = 27,
                 Species = new[] {35,605,173,022,774,374,227,239,132},
@@ -1083,14 +1083,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 116, idx = 1, mark = "Grass", //15
+                Location = 116, idx = 1, mark = "陆地", //15
                 Correction = 26, NPC = 1,
                 LevelMin = 30,
                 Species = new[] {22,735,279,279,279,079},
             },
             new EncounterArea_USUM
             {
-                Location = 116, idx = 2, mark = "Water", //15
+                Location = 116, idx = 2, mark = "水路", //15
                 Correction = 27, NPC = 1,
                 LevelMin = 32,
                 Species = new[] {15,073,279,456},
@@ -1111,42 +1111,42 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 120, idx = 1, //17
+                Location = 120, idx = 1, mark = "绿色草丛", //17
                 Correction = 09, Raining = true,
                 LevelMin = 33,
                 Species = new[] {10,735,022,559,166,166,166},
             },
             new EncounterArea_USUM
             {
-                Location = 120, idx = 2, //17
+                Location = 120, idx = 2, mark = "褐色草丛", //17
                 Correction = 10, Raining = true,
                 LevelMin = 33,
                 Species = new[] {47,735,022,559,227,075,227,625},
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 1, mark = "Base",
+                Location = 146, idx = 1, mark = "入口",
                 Correction = 07, NPC = 5,
                 LevelMin = 30,
                 Species = new[] {35,037,361,735,735,359,037,361,359},
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 2, mark = "Mt Side",
+                Location = 146, idx = 2, mark = "山腰",
                 Correction = 02,
                 LevelMin = 47,
                 Species = new[] {22,037,362,359,359,215},
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 3, mark = "West Room",
+                Location = 146, idx = 3, mark = "西侧洞窟",
                 Correction = 08,
                 LevelMin = 47,
                 Species = new[] {22,042,362,359,359,215},
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 4, mark = "Outside",
+                Location = 146, idx = 4, mark = "山腰",
                 Correction = 05, NPC = 3,
                 LevelMin = 47,
                 Species = new[] {22,037,362,359,780,215},
@@ -1154,7 +1154,7 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 5, mark = "Cave",
+                Location = 146, idx = 5, mark = "东侧洞窟",
                 Correction = 07, NPC = 2,
                 LevelMin = 48,
                 Species = new[] {22,042,362,359,780,215},
@@ -1162,7 +1162,7 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 6, mark = "Mid-Point",
+                Location = 146, idx = 6, mark = "山顶",
                 LevelMin = 48,
                 Species = new[] {22,037,362,359,780,215},
                 Reverse = true,
@@ -1193,14 +1193,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 174, idx = 1, mark = "Inside",
+                Location = 174, idx = 1, mark = "洞窟",
                 Correction = 6, NPC = 1,
                 LevelMin = 42,
                 Species = new[] {14,042,051,525,525,703},
             },
             new EncounterArea_USUM
             {
-                Location = 174, idx = 2, mark = "Top",
+                Location = 174, idx = 2, mark = "山顶",
                 LevelMin = 42,
                 Species = new[] {48,067,745,619,227,525,619,703,782},
             },
@@ -1220,21 +1220,21 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 174, idx = 5, mark = "Under Tree",
+                Location = 174, idx = 5, mark = "树下",
                 Correction = 20, NPC = 1,
                 LevelMin = 42,
                 Species = new[] {48,067,745,619,227,525,619,703,782},
             },
             new EncounterArea_USUM
             {
-                Location = 174, idx = 6, mark = "B1F-C",
+                Location = 174, idx = 6, mark = "B1F陆地",
                 Correction = 8,
                 LevelMin = 42,
                 Species = new[] {14,042,051,525,525,703},
             },
             new EncounterArea_USUM
             {
-                Location = 174, idx = 7, mark = "B1F-W",
+                Location = 174, idx = 7, mark = "B1F水路",
                 Correction = 9, NPC = 1,
                 LevelMin = 42,
                 Species = new[] {14,042,055,042,042,042},
@@ -1255,28 +1255,28 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 166, idx = 1, // Poni Plains
+                Location = 166, idx = 1, mark="海岸线旁", // Poni Plains
                 Correction = 5, NPC = 1,
                 LevelMin = 54,
                 Species = new[] {7,735,279,732,546,128,241,546},
             },
             new EncounterArea_USUM
             {
-                Location = 166, idx = 2, // Poni Plains
+                Location = 166, idx = 2, mark="中间七片草", // Poni Plains
                 Correction = 5, NPC = 1,
                 LevelMin = 54,
                 Species = new[] {21,735,732,546,128,241,546},
             },
             new EncounterArea_USUM
             {
-                Location = 166, idx = 3, // Poni Plains
+                Location = 166, idx = 3, mark="北边和树旁", // Poni Plains
                 Correction = 5, NPC = 1,
                 LevelMin = 54,
                 Species = new[] {7,735,297,732,546,128,241,097},
             },
             new EncounterArea_USUM
             {
-                Location = 166, idx = 4, // Poni Plains
+                Location = 166, idx = 4, mark="田字状台地南方", // Poni Plains
                 Correction = 5, NPC = 1,
                 LevelMin = 54,
                 Species = new[] {31,735,732,750,022,546,128,241},
@@ -1664,13 +1664,13 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 232, idx = 1, // Dividing Peak Tunnel
+                Location = 232, idx = 1, mark="影子", // Dividing Peak Tunnel
                 NPC = 2, LevelMin = 17,
                 SlotType = 42, Species = new[] {352},
             },
             new MiscEncounter7
             {
-                Location = 232, idx = 2, // Dividing Peak Tunnel
+                Location = 232, idx = 2, mark="逃跑的宝可梦", // Dividing Peak Tunnel
                 NPC = 5, LevelMin = 17,
                 SlotType = 42, Species = new[] {767},
             },
@@ -1694,14 +1694,14 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 064, idx = 1, // Hano Beach
+                Location = 064, idx = 1, mark="沙云", // Hano Beach
                 NPC = 3, LevelMin = 22,
                 DelayType1 = 3,
                 SlotType = 40, Species = new[] {120, 769},
             },
             new MiscEncounter7
             {
-                Location = 064, idx = 2, // Hano Beach
+                Location = 064, idx = 2, mark="水花", // Hano Beach
                 NPC = 2, LevelMin = 22,
                 SlotType = 42, Species = new[] {072},
             },
@@ -1727,19 +1727,19 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 162, idx = 1, // Poni Breaker Coast
+                Location = 162, idx = 1, mark="逃跑的宝可梦", // Poni Breaker Coast
                 NPC = 1, LevelMin = 41,
                 SlotType = 42, Species = new[] {767},
             },
             new MiscEncounter7
             {
-                Location = 162, idx = 2, // Poni Breaker Coast
+                Location = 162, idx = 2, mark="水花", // Poni Breaker Coast
                 NPC = 3, LevelMin = 41,
                 SlotType = 45, Species = new[] {320, 321, 693},
             },
             new MiscEncounter7
             {
-                Location = 166, idx = 1, // Poni Plains
+                Location = 166, idx = 1, mark="灌木丛", // Poni Plains
                 NPC = 2, LevelMin = 54,
                 DelayType1 = 3,
                 DelayType2 = 0, Delay2 = 162,
@@ -1747,7 +1747,7 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 166, idx = 2, // Poni Plains
+                Location = 166, idx = 2, mark="树上", // Poni Plains
                 NPC = 2, LevelMin = 54,
                 DelayType1 = 3,
                 DelayType2 = 0, Delay2 = 162,
@@ -1755,14 +1755,14 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 166, idx = 3, // Poni Plains
+                Location = 166, idx = 3, mark="影子", // Poni Plains
                 NPC = 2, LevelMin = 54,
                 DelayType2 = 1, Delay2 = 138,
                 SlotType = 40, Species = new[] {022, 628},
             },
             new MiscEncounter7
             {
-                Location = 166, idx = 4, // Poni Plains
+                Location = 166, idx = 4, mark="草丛", // Poni Plains
                 NPC = 4, LevelMin = 54,
                 SlotType = 40, Species = new[] {735, 668},
             },
@@ -1844,13 +1844,13 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 158, idx = 1, // Poni Wilds
+                Location = 158, idx = 1, mark="水花", // Poni Wilds
                 NPC = 1, LevelMin = 40,
                 SlotType = 05, Species = new[] {320, 321},
             },
             new MiscEncounter7
             {
-                Location = 158, idx = 2, // Poni Wilds
+                Location = 158, idx = 2, mark="逃跑的宝可梦", // Poni Wilds
                 NPC = 1, LevelMin = 40,
                 SlotType = 42, Species = new[] {767},
             },
@@ -1868,7 +1868,7 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 166, idx = 1, // Poni Plains
+                Location = 166, idx = 1, mark="灌木丛", // Poni Plains
                 NPC = 2, LevelMin = 54,
                 DelayType1 = 3,
                 DelayType2 = 0, Delay2 = 162,
@@ -1876,7 +1876,7 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 166, idx = 2, // Poni Plains
+                Location = 166, idx = 2, mark="树上", // Poni Plains
                 NPC = 2, LevelMin = 54,
                 DelayType1 = 3,
                 DelayType2 = 0, Delay2 = 162,
@@ -1884,14 +1884,14 @@ namespace Pk3DSRNGTool
             },
             new MiscEncounter7
             {
-                Location = 166, idx = 3, // Poni Plains
+                Location = 166, idx = 3, mark="影子", // Poni Plains
                 NPC = 2, LevelMin = 54,
                 DelayType2 = 1, Delay2 = 138,
                 SlotType = 40, Species = new[] {022, 628},
             },
             new MiscEncounter7
             {
-                Location = 166, idx = 4, // Poni Plains
+                Location = 166, idx = 4, mark="草丛", // Poni Plains
                 NPC = 4, LevelMin = 54,
                 SlotType = 40, Species = new[] {735, 297},
             },

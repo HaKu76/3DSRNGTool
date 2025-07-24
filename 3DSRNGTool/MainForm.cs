@@ -154,13 +154,8 @@ namespace Pk3DSRNGTool
 
         private void SetLocations()
         {
-            L_HA.Location = new Point(200, 192);
-            HA_MainSlot.Location = new Point(230, 190);
 
             CB_HAUnlocked.Location = new Point(17, 158);
-            TriggerMethod.Location = new Point(225, 192);
-            L_TriggerMethod.Location = new Point(164, 196);
-            Bubbling.Location = new Point(194, 196);
             CB_3rdSlotUnlocked.Location = new Point(167, 196);
             L_SOSRNGIndex.Location = new Point(303, 157);
             Raining.Location = new Point(330, 158);
@@ -168,8 +163,7 @@ namespace Pk3DSRNGTool
             CB_ForcedShiny.Location = new Point(30, 130);
             CB_NavHA.Location = new Point(180, 130);
             CB_NavUnown.Location = new Point(300, 130);
-            L_Potential.Location = new Point(175, 195);
-            Potential.Location = new Point(245, 192);
+
         }
 
         private void RefreshProfile()

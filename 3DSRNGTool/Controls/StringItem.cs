@@ -41,7 +41,7 @@ namespace Pk3DSRNGTool
         {
             get
             {
-                var list = LeadAbilityIndex.Select((t, i) => new ComboItem(abilitystr[t], i)).Concat( new[] { new ComboItem("Black Flute", 9), new ComboItem("White Flute", 10) }).ToArray();
+                var list = LeadAbilityIndex.Select((t, i) => new ComboItem(abilitystr[t], i)).Concat( new[] { new ComboItem("黑色玻璃哨", 9), new ComboItem("白色玻璃哨", 10) }).ToArray();
                 list[2].Text += genderstr[1];
                 list[3].Text += genderstr[2];
                 list[7].Text += " | " + abilitystr[60]; // Suction cups|Sticky Hold
@@ -63,6 +63,10 @@ namespace Pk3DSRNGTool
         {
             // Translation for category
             // en ja fr de es zh
+            new [] { "Super Rod",                "Super Rod",              "Super Rod",            "Super Rod",             "Super Rod",             "厉害钓竿" },
+            new [] { "Good Rod",                "Good Rod",              "Good Rod",            "Good Rod",             "Good Rod",             "好钓竿" },
+            new [] { "Old Rod",                "Old Rod",              "Old Rod",            "Old Rod",             "Old Rod",             "破旧钓竿" },
+            new [] { "DexNav",                "DexNav",              "DexNav",            "DexNav",             "DexNav",             "图鉴导航" },
             new [] { "Legendary",           "伝説のポケモン",     "Légendaires",      "Legendäre",        "Legendario",       "定点传说" },
             new [] { "Starters",            "御三家",            "Starters",         "Starters",         "Starters",         "御三家" },
             new [] { "In-Game Gift",        "In-Game Gift",     "Cadeaux",          "In-Game Gift",     "In-Game Gift",     "礼物" },
