@@ -440,21 +440,21 @@ namespace Pk3DSRNGTool
             PathRate2 = CalcRate2(true, true);
             Search7_Battle(true, Both);
 
-            string steps = "No path found";
+            string steps = "没有找到路径";
 
             try
             {
                 //Case: Target index calls and succeeds no matter what
                 if (Nothing[SelectedIndex].Advance > 2)
-                    steps = "1. Thunder Wave/Glare before index " + SelectedIndex.ToString()
-                        + "\n2. Advance turns until index " + SelectedIndex.ToString()
-                        + "\n3. At index " + SelectedIndex.ToString() + ", heal => Target appears";
+                    steps = "1. 在index=" + SelectedIndex.ToString() + "前使用电磁波或大蛇瞪眼使其麻痹"
+                        + "\n2. 推进index到" + SelectedIndex.ToString()
+                        + "\n3. 在index=" + SelectedIndex.ToString() + "使其解除麻痹 => 目标出现";
 
                 //Case: Target index calls and succeeds only if: (Target index - 2) has called and failed
                 else if (Both[SelectedIndex].Advance > 2 && Nothing[SelectedIndex - 2].Advance == 2)
-                    steps = "1. Thunder Wave/Glare before index " + (SelectedIndex - 2).ToString()
-                        + "\n2. Heal at index " + (SelectedIndex - 2).ToString() + " => Calls and fails => Lands at index " + SelectedIndex.ToString()
-                        + "\n3. At index " + SelectedIndex.ToString() + ", advance turn => Target appears";
+                    steps = "1. 在index=" + (SelectedIndex - 2).ToString() + "前使用电磁波或大蛇瞪眼使其麻痹"
+                        + "\n2. 在index=" + (SelectedIndex - 2).ToString() + "使用治愈波动 => 呼唤失败 => index=" + SelectedIndex.ToString()
+                        + "\n3. 在index=" + SelectedIndex.ToString() + "推进回合 => 目标出现";
 
                 //Case: Target index calls and succeeds only if: one of the previous indexes has called and succeed + the advances land on the target index
                 else if (CallOnly[SelectedIndex].Advance > 2)
@@ -464,35 +464,35 @@ namespace Pk3DSRNGTool
                         {
                             if (Nothing[SelectedIndex - d].Index + Nothing[SelectedIndex - d].Advance == CallOnly[SelectedIndex].Index)
                             {
-                                steps = "1. Thunder Wave/Glare before index " + (SelectedIndex - d).ToString()
-                                    + "\n2. At index " + (SelectedIndex - d).ToString() + ", heal => New ally appears " +
-                                    "(Should not have any perfect IVs from main RNG) => Lands at index " + SelectedIndex.ToString()
-                                    + "\n3. At index " + SelectedIndex.ToString() + ", knock out the new ally => Target appears";
+                                steps = "1. 在index=" + (SelectedIndex - d).ToString() + "前使用电磁波或大蛇瞪眼使其麻痹"
+                                    + "\n2. 在index=" + (SelectedIndex - d).ToString() + "使用治愈波动 => 新的同伴出现 " +
+                                    "(主随机数生成器不应生成任何完美个体值) => 落在index=" + SelectedIndex.ToString()
+                                    + "\n3. 在index=" + SelectedIndex.ToString() + "时，击败新同伴 => 目标出现";
                                 break;
                             }
                             else if (Both[SelectedIndex - d].Index + Both[SelectedIndex - d].Advance == CallOnly[SelectedIndex].Index)
                             {
                                 if (Nothing[SelectedIndex - d - 2].Advance == 2)
-                                    steps = "1. Thunder Wave/Glare before index " + (SelectedIndex - d - 2).ToString()
-                                        + "\n2. Heal at index " + (SelectedIndex - d - 2).ToString() + " => Calls and fails => Lands at index " + (SelectedIndex - d).ToString()
-                                        + "\n3. At index " + (SelectedIndex - d).ToString() + ", advance turn => New ally appears " +
-                                        "(Should not have any perfect IVs from main RNG) => Lands at index " + SelectedIndex.ToString()
-                                        + "\n4. At idnex " + SelectedIndex.ToString() + ", knock out the new ally => Target appears";
+                                    steps = "1. 在index=" + (SelectedIndex - d - 2).ToString() + "前使用电磁波或大蛇瞪眼使其麻痹"
+                                        + "\n2. 在index=" + (SelectedIndex - d - 2).ToString() + "使用治愈招式 => 触发失败 => 落在index=" + (SelectedIndex - d).ToString()
+                                        + "\n3. 在index=" + (SelectedIndex - d).ToString() + "时，推进回合 => 新的同伴出现 " +
+                                        "(主随机数生成器不应生成任何完美个体值) => 落在index=" + SelectedIndex.ToString()
+                                         + "\n4. 在index=" + SelectedIndex.ToString() + "时，击败新同伴 => 目标出现";
                             }
                         }
                     }
 
                 new Thread(() =>
                 {
-                    if (steps.Equals("No path found"))
-                        MessageBox.Show(steps, "Unhittable Index", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (steps.Equals("没有找到路径"))
+                        MessageBox.Show(steps, "无法击中的index", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
-                        MessageBox.Show(steps, "Steps", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(steps, "操作步骤", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }).Start();
             }
             catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Index outside the range. Path can't be calculated.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Index超出范围，无法计算路径。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
