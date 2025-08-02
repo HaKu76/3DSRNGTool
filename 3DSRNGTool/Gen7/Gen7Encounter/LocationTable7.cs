@@ -1717,7 +1717,7 @@ namespace Pk3DSRNGTool
             {
                 Location = 124, // Haina Desert
                 NPC = 1, LevelMin = 32,
-                SlotType = 44, Species = new[] {551, 051, 328},
+                SlotType = 44, Species = new[] {552, 051, 328},
             },
             new MiscEncounter7
             {
