@@ -104,9 +104,9 @@ namespace Pk3DSRNGTool
     {
         protected override Dictionary<int, int> Day2Night => new Dictionary<int, int>
         {
-            {734, 019}, {735, 020},  // Yungoos -> Rattata
-            {165, 167}, {166, 168},  // Ledyba -> Spinarak
-            {046, 755},              // Paras -> Morelull
+            {734, 019}, {735, 020},  // 猫鼬少->小拉达 Yungoos -> Rattata
+            {165, 167}, {166, 168},  // 芭瓢虫->圆丝蛛 Ledyba -> Spinarak
+            {046, 755}, {047, 756},  // 派拉斯->睡睡菇 Paras -> Morelull
             {751, 283}, {752, 284},  // Dewplder -> Surskit
             {425, 200},              // Drifloon -> Misdreavus
             {745,2793},              // Lycanroc(day -> night)
@@ -132,7 +132,7 @@ namespace Pk3DSRNGTool
         {
             {734, 019}, {735, 020}, // Yungoos -> Rattata
             {165, 167}, {166, 168}, // Ledyba -> Spinarak
-            {046, 755},             // Paras -> Morelull
+            {046, 755}, {047, 756}, // 派拉斯->睡睡菇 Paras -> Morelull
             {751, 283}, {752, 284}, // Dewplder -> Surskit
             {425, 198},             // Drifloon -> Murkrow
             {745,2793},             // Lycanroc(day -> night)

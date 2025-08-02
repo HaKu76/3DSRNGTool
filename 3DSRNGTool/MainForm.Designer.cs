@@ -2880,7 +2880,7 @@
             this.Night.Name = "Night";
             this.Night.Size = new System.Drawing.Size(58, 19);
             this.Night.TabIndex = 79;
-            this.Night.Text = "夜间";
+            this.Night.Text = "夜晚";
             this.Night.UseVisualStyleBackColor = true;
             this.Night.CheckedChanged += new System.EventHandler(this.DayNight_CheckedChanged);
             // 
