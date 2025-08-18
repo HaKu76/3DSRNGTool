@@ -355,7 +355,7 @@
                 List = new[]
                 {
                     new PKM7 { Species = 731, Level = 03, NPC = 1, Delay = 16, ShinyLocked = true, IVs = new[] { -1, -1, -1, -1, -1, 1 }, }, // Pikipek
-                    new PKM7 { Species = 103, Level = 40, Forme = 1, Delay = 88, Unstable = true, DelayType = 3, },  // Exeggutor
+                    new PKM7 { Species = 103, Level = 40, Forme = 1, Delay = 88, ShinyLocked = true, Unstable = true, DelayType = 3, },  // Exeggutor
                 }
             },
             new PokemonList

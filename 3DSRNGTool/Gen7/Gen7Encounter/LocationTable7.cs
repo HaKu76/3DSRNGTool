@@ -1125,14 +1125,14 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 1, mark = "入口",
+                Location = 146, idx = 1, mark = "山脚",
                 Correction = 07, NPC = 5,
                 LevelMin = 30,
                 Species = new[] {35,037,361,735,735,359,037,361,359},
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 2, mark = "山腰",
+                Location = 146, idx = 2, mark = "南侧山腰",
                 Correction = 02,
                 LevelMin = 47,
                 Species = new[] {22,037,362,359,359,215},
@@ -1142,15 +1142,15 @@ namespace Pk3DSRNGTool
                 Location = 146, idx = 3, mark = "西侧洞窟",
                 Correction = 08,
                 LevelMin = 47,
-                Species = new[] {22,042,362,359,359,215},
+                Species = new[] {22,042,362,359,780,215},
+                Reverse = true,
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 4, mark = "山腰",
+                Location = 146, idx = 4, mark = "西侧山腰",
                 Correction = 05, NPC = 3,
                 LevelMin = 47,
-                Species = new[] {22,037,362,359,780,215},
-                Reverse = true,
+                Species = new[] {22,037,362,359,359,215},
             },
             new EncounterArea_USUM
             {
@@ -1162,10 +1162,9 @@ namespace Pk3DSRNGTool
             },
             new EncounterArea_USUM
             {
-                Location = 146, idx = 6, mark = "山顶",
+                Location = 146, idx = 6, mark = "高处",
                 LevelMin = 48,
-                Species = new[] {22,037,362,359,780,215},
-                Reverse = true,
+                Species = new[] {22,037,362,359,359,215},
             },
             #endregion
             #region Poni

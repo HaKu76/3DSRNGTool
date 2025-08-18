@@ -148,10 +148,10 @@ namespace Pk3DSRNGTool
             {546, 548}, // Cottonee -> Petill
             {766, 765}, // Passimian -> Oranguru
             {776, 324}, // Turtonator -> Torkoal
-            {037, 027}, // Vulpix -> Sandshrew
+            {037, 027}, // 六尾 -> 穿山鼠 Vulpix -> Sandshrew
             {229, 310}, // Hondooom -> Manectric
             // Reverse from here
-            {780, 359}, // Drampa -> Absol
+            {780, 359}, // 老翁龙 -> 阿勃梭鲁 Drampa -> Absol
         };
         
         public override bool DayNightDifference => Species.Skip(1).Any(i => Day2Night.ContainsKey(i) || i == 173);
